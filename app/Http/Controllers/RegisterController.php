@@ -23,7 +23,7 @@ class RegisterController extends Controller
       $bio = $req->input('bio');
 
       return view('pages/welcome', [
-        "name" => $firstName . " " . $lastName,
+        "name" => ucwords(strtolower($firstName)) . " " . ucwords(strtolower($lastName)),
         "gender" => $gender,
         "nationality" => $nationality,
         "language" => $language,
